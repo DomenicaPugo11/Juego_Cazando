@@ -6,15 +6,13 @@ const ANCHO_GATO=50;
 const ALTO_COMIDA=50;
 const ANCHO_COMIDA=50;
 
-let personajeSuelo=canvas.height-ALTO_GATO;
-
 let gatoX=canvas.width/2;
-let gatoY=0;
+let gatoY=canvas.height-ALTO_GATO;
 let comidaX=0;
 let comidaY=0;
 
 function graficarGato(){
-    graficarRectangulo(gatoX,personajeSuelo,ANCHO_GATO,ALTO_GATO,"blue");
+    graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"blue");
 }
 
 function graficarComida(){
@@ -40,6 +38,27 @@ function limpiarCanva(){
 
 function moverIzquierda(){
     gatoX=gatoX-10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
+}
+
+function moverDerecha(){
+    gatoX=gatoX+10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
+}
+
+function moverArriba(){
+    gatoY=gatoY-10;
+    limpiarCanva();
+    graficarGato();
+    graficarComida();
+}
+
+function moverAbajo(){
+    gatoY=gatoY+10;
     limpiarCanva();
     graficarGato();
     graficarComida();
