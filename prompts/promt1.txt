@@ -1,0 +1,1 @@
+Actúa como un diseñador web,  y mejora la parte visual de esta pagina web sin juntar los archivos html y css , ponle una estructura a la pagina donde sus colores combinen al igual que el tamaño de las letras segun lo que necesite y consideres que quede bien

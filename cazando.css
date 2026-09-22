@@ -5,58 +5,83 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e8f5e9, #fff3df);
-  color: #3f3a32;
+  background: linear-gradient(135deg, #e9e4ff, #f7efff);
+  color: #403b55;
   margin: 0;
   padding: 30px 20px;
   min-height: 100vh;
 }
 
+
+/* CONTENEDOR */
+
 .contenedor {
   max-width: 700px;
   margin: 0 auto;
   padding: 25px;
-  background-color: #fffdf8;
-  border: 3px solid #7aa66b;
+  background-color: #fffdf9;
+  border: 3px solid #9b8bd4;
   border-radius: 25px;
-  box-shadow: 0 8px 25px rgba(70, 90, 60, 0.20);
+  box-shadow: 0 8px 25px rgba(80, 65, 120, 0.18);
 }
+
 
 /* ENCABEZADO */
 
 .encabezado {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 25px;
+}
+
+.titulo-texto {
+  text-align: center;
+}
+
+.huella {
+  font-size: 25px;
 }
 
 .titulo h1 {
-  margin: 0;
+  margin: 5px 0 8px 0;
   font-size: 38px;
-  color: #56834d;
+  color: #6553a6;
 }
 
-.titulo {
-  font-size: 30px;
+.titulo p {
+  margin: 0;
+  font-size: 17px;
+  color: #6c6478;
 }
 
-.encabezado p {
-  margin: 8px 0;
-  font-size: 18px;
-  color: #665c4f;
+
+/* IMAGEN DEL GATO */
+
+.imagen-gato {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #c4b8ed;
+  box-shadow: 0 5px 15px rgba(80, 65, 120, 0.20);
 }
+
+
+/* AUTOR */
 
 .encabezado .autor {
-  font-size: 15px;
-  color: #8b8172;
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  color: #7a7189;
 }
 
-/* JUEGO */
+
+/* AREA DEL JUEGO */
 
 .juego {
   padding: 0;
@@ -65,13 +90,14 @@ body {
 
 canvas {
   background-color: #fffaf0;
-  border: 4px solid #d88b32;
-  border-radius: 15px;
+  border: 4px solid #8b78c4;
+  border-radius: 18px;
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  box-shadow: 0 5px 15px rgba(100, 80, 40, 0.20);
+  box-shadow: 0 5px 18px rgba(80, 65, 120, 0.20);
 }
+
 
 /* PANEL */
 
@@ -85,11 +111,11 @@ canvas {
 .dato {
   min-width: 150px;
   padding: 12px 20px;
-  background-color: #eef6e9;
-  border: 2px solid #9abd8d;
+  background-color: #f0ecff;
+  border: 2px solid #c4b8ed;
   border-radius: 14px;
   font-size: 17px;
-  box-shadow: 0 3px 8px rgba(70, 90, 60, 0.12);
+  box-shadow: 0 3px 8px rgba(80, 65, 120, 0.10);
 }
 
 .dato span:first-child {
@@ -100,8 +126,9 @@ canvas {
   display: block;
   margin-top: 5px;
   font-size: 27px;
-  color: #56834d;
+  color: #6553a6;
 }
+
 
 /* CONTROLES */
 
@@ -116,33 +143,35 @@ canvas {
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background-color: #7aa66b;
+  background-color: #8270c2;
   color: white;
   cursor: pointer;
-  box-shadow: 0 4px 0 #527346;
+  box-shadow: 0 4px 0 #5d4b91;
   transition: 0.2s;
 }
 
 .controles button:hover {
-  background-color: #8dbd7d;
+  background-color: #9484cf;
   transform: translateY(-2px);
 }
 
 .controles button:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #527346;
+  box-shadow: 0 2px 0 #5d4b91;
 }
+
 
 /* BOTON REINICIAR */
 
 .controles .boton-reiniciar {
-  background-color: #e28a32;
-  box-shadow: 0 4px 0 #b36218;
+  background-color: #e5a04b;
+  box-shadow: 0 4px 0 #b87826;
 }
 
 .controles .boton-reiniciar:hover {
-  background-color: #ed9b48;
+  background-color: #edb263;
 }
+
 
 /* MENSAJE */
 
@@ -150,9 +179,10 @@ canvas {
   min-height: 30px;
   font-size: 20px;
   font-weight: bold;
-  color: #c56b20;
+  color: #7355a8;
   margin-top: 18px;
 }
+
 
 /* PANTALLAS PEQUEÑAS */
 
@@ -166,8 +196,18 @@ canvas {
     padding: 15px;
   }
 
+  .titulo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .titulo h1 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  .imagen-gato {
+    width: 100px;
+    height: 100px;
   }
 
   .panel {
