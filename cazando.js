@@ -1,8 +1,8 @@
 let canvas=document.getElementById("areaJuego");
 let ctx=canvas.getContext("2d")
 
-const ALTO_GATO=100;
-const ANCHO_GATO=50;
+const ALTO_GATO=120;
+const ANCHO_GATO=60;
 const ALTO_COMIDA=50;
 const ANCHO_COMIDA=50;
 
@@ -15,7 +15,7 @@ let tiempo=10;
 let intervalo;
 
 function graficarGato(){
-    graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"blue");
+    graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"red");
 }
 
 function graficarComida(){
@@ -94,7 +94,7 @@ function restarTiempo(){
         alert("GANASTEE");
         clearInterval(intervalo);
     }else if (tiempo==0){
-        alert("GAME OVER");
+        alert("PERDISTE");
         clearInterval(intervalo);
     }
 }
@@ -115,3 +115,6 @@ function reiniciar(){
     intervalo=setInterval(restarTiempo,1000);
 }
 
+function desaparecerPersonaje(){
+    ctx.clearRect(gatoX,gatoY,ANCHO_GATO,ALTO_GATO)
+}
